@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { PeopleViewComponent } from './people-view.component';
+
+describe('PeopleViewComponent', () => {
+  let component: PeopleViewComponent;
+  let fixture: ComponentFixture<PeopleViewComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ PeopleViewComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(PeopleViewComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

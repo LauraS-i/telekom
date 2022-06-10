@@ -1,0 +1,23 @@
+<div class="container">
+
+    <a routerLink="/dogs" [queryParams]="{sort : 'desc'}">Sort Descending</a> <br>
+    <select class="select" [(ngModel)]="selectedBreed" (ngModelChange)="filter(selectedBreed)">
+      <option value=''>Show all dogs!</option>
+      <option *ngFor="let dog of dogs"> {{dog.name}} </option>
+    </select>
+
+
+  <ul>
+    <li *ngFor="let breed of filteredBreeds">
+      {{breed.name}}
+      <ul *ngIf="breed.types.length">
+        <li  *ngFor="let subtypes of breed.types;">{{subtypes}} </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
